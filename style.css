@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* ROBOTO FONT */ 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+*{
+   font-family: "Poppins", sans-serif;
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+  
+}
+body {
+    background: linear-gradient(to bottom, #0a3f4f, #151d1f);
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+
+
+
+/* Media Queries for Responsiveness */
+@media (max-width: 30rem) { /* 480px → 30rem */
+    .sendButton {
+        font-size: 1rem;
+        padding: 0.375rem 0.625rem; /* 0.6rem 1rem */
+    }
+}
+@media (max-width: 48rem) { /* 768px → 48rem */
+    .sendButton {
+        font-size: 1.2rem;
+        padding: 0.5rem 0.9375rem; /* 0.8rem 1.5rem */
+    }
+}
+
+
+/* Clock */
+
+.clock {
+    position: absolute; /* Added to position the clock */
+    top: 1rem; /* Position at the top */
+    left: 1rem; /* Position at the left */
+    width: 80vw;
+    height: 80vw;
+    max-width: 200px;
+    max-height: 200px;
+    background: radial-gradient(circle, rgb(55,138,232));
+    border-radius: 50%;
+    border: solid 4px white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 15px 15px rgba(13, 27, 85, 1);
+}
+
+.number {
+    transform: rotate(calc(30deg * var(--n)));
+    position: absolute;
+    text-align: center;
+    inset: 5%;
+    font-size: 1rem;
+    color: rgb(171, 237, 241);
+}
+
+/* Fix numbers rotation */
+.number p {
+    transform: rotate(calc(-30deg * var(--n)));
+    display: inline-block;
+}
+
+.center {
+    position: absolute;
+    width: 4%;
+    height: 4%;
+    background-color: rgb(164, 12, 50);
+    border-radius: 50%;
+}
+
+.hand {
+    position: absolute;
+    width: 2%;
+    height: 35%;
+    background-color: black;
+    left: 50%;
+    bottom: 50%;
+    --rotate: 0;
+    transform-origin: bottom;
+    transform: translateX(-50%) rotate(var(--rotate));
+    border-radius: 5px;
+}
+
+.hour {
+    height: 25%;
+    background-color: silver;
+}
+
+.minute {
+    height: 35%;
+    background-color: silver;
+}
+
+.second {
+    height: 40%;
+    background-color: rgb(163, 9, 30);
+}
+ /* CALCULATOR */ 
+
+
+/* Responsive Design */
+@media (max-width: 768px) {  /* Tablets and smaller */
+    #showCalculatorBtn {
+        position: relative; /* Moves it to flow naturally below the send button */
+        right: auto; /* Resets the right positioning */
+        bottom: auto; /* Resets the bottom positioning */
+        display: block; /* Ensures it takes full width if needed */
+        margin: 1rem auto 0; /* Adds the 1rem margin from the send button */
+        text-align: center;
+    }
+@media (max-width: 480px) { /* Smallest Phones */
+        #showCalculatorBtn {
+            width: 90%; /* Makes it responsive */
+            text-align: center;
+        }
+}
+}
+
